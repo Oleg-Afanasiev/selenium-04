@@ -9,9 +9,12 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class LoginTests extends BaseTest {
 
-    @Test(dataProvider = "authProvider", enabled = false)
+    @Test(dataProvider = "authProvider")
     public void testAuthCorrect(String email, String password, String userNameExpected) throws Exception {
         System.out.println("Start 'testAuthCorrect'");
 
@@ -24,18 +27,23 @@ public class LoginTests extends BaseTest {
         System.out.println("Complete 'testAuthCorrect'");
     }
 
-    @Test(dataProvider = "incorrectLoginProvider", enabled = false)
+    @Test(dataProvider = "incorrectLoginProvider")
     // TODO
-    public void testAuthIncorrect(String email, String password, String errorMsg) {
+    public void testAuthIncorrect(String email, String password, String errorMsgExpected) {
         System.out.println("Start 'testAuthIncorrect'");
-        System.out.println(String.format("email: %s, password:%s, errorMsg:%s", email, password, errorMsg));
+        System.out.println(String.format("email: %s, password:%s, errorMsg:%s", email, password, errorMsgExpected));
+        manager.goTo().home();
+        manager.session().loginAs(email, password);
+        String errMessageActual = manager.session().getErrMessage();
+        assertThat(errMessageActual, equalTo(errorMsgExpected));
         System.out.println("Complete 'testAuthIncorrect'");
+
     }
 
     @DataProvider(name="authProvider")
     private Object[][] authProvider() {
         return new Object[][]{
-                {PropertyManager.getProperty("automation.username"), PropertyManager.getProperty("automation.password"), "Oleg Afanasiev"}
+                {PropertyManager.getProperty("automation.username"), PropertyManager.getProperty("automation.password"), "Александр Томах"}
         };
     }
 
