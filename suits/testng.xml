@@ -10,4 +10,11 @@
             <package name="com.academy.mobile.ddt.tests.full.*" />
         </packages>
     </test>
+    <!--<test name="all">-->
+        <!--<parameter name="browser" value="firefox" />-->
+        <!--<packages>-->
+            <!--&lt;!&ndash;Запускаем все тесты из пакета 'com.academy.tests.*'&ndash;&gt;-->
+            <!--<package name="com.academy.automationpractice.ddt.tests.*" />-->
+        <!--</packages>-->
+    <!--</test>-->
 </suite>
