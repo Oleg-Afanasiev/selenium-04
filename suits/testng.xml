@@ -5,10 +5,10 @@
 <suite name="tests" parallel="tests" thread-count="1">
     <test name="all">
         <parameter name="browser" value="chrome" />
-        <packages>
+        <classes>
             <!--Запускаем все тесты из пакета 'com.academy.tests.*'-->
-            <package name="com.academy.automationpractice.ddt.tests.*" />
-        </packages>
+            <class name="com.academy.automationpractice.ddt.tests.SortDresses" />
+        </classes>
     </test>
     <!--<test name="all">-->
         <!--<parameter name="browser" value="firefox" />-->

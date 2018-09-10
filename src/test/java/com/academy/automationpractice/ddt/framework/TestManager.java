@@ -18,6 +18,7 @@ public class TestManager {
     private AccountHelper accountHelper;
     private VerifyHelper verifyHelper;
     private AddressHelper addressHelper;
+    private SortDressesHelper sortDressesHelper;
 
     public void init(String browser) throws IOException {
 
@@ -40,6 +41,7 @@ public class TestManager {
         accountHelper = new AccountHelper(driver);
         addressHelper = new AddressHelper(driver);
         verifyHelper = new VerifyHelper(driver);
+        sortDressesHelper = new SortDressesHelper(driver);
     }
 
     public void stop() {
@@ -65,4 +67,5 @@ public class TestManager {
     public AddressHelper address() {
         return addressHelper;
     }
+    public SortDressesHelper dress(){return sortDressesHelper ;}
 }
