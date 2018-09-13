@@ -37,7 +37,7 @@ public class WomenPage extends BasePage {
         return this;
     }
     public List<String> listProduct() {
-        List<WebElement> listActual =driver.findElements(By.xpath( "//a[@class=\"product-name\"]" ));
+        List<WebElement> listActual =driver.findElements(By.xpath( "//*[@id=\"center_column\"]/ul/li/div/div/div[2]/h5/a" ));
         List<String> actualList = new ArrayList<String>();
         for (WebElement e : listActual) {
             actualList.add(e.getText());
