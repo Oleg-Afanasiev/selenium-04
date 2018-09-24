@@ -20,6 +20,7 @@ public class LoginTests extends BaseTest {
 
         manager.goTo().home();
         manager.session().login();
+        System.out.println("Тест Идет");
 
         manager.verify().userIsLoggedIn(userNameExpected);
         manager.session().logout();
