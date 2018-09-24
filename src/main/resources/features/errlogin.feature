@@ -12,5 +12,5 @@ Feature: Тестируем страницу авторизации
 
     Examples:
       | логин                 | пароль        | сообщение                   |
-      | oleg.kh81@gmail.com   |123            |Invalid password.            |
-      | 123                   |123qwerty      |Invalid email address.       |
+      | wizik88@gmail.com     |123            |Invalid password.            |
+      | 123                   |Tomax1488      |Invalid email address.       |

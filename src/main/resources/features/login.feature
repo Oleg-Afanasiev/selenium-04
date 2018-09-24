@@ -7,8 +7,8 @@ Feature: Login Profile
   Scenario: Successful login
     Given I am on home page
     Then I click on signIn link
-    When I fill login 'oleg.kh81@gmail.com'
-    And I fill password '123qwerty'
+    When I fill login 'wizik88@gmail.com'
+    And I fill password 'Tomax1488'
     And click signIn button
-    Then I should see 'Oleg Afanasiev' link
+    Then I should see 'Александр Томах' link
     Then I should make logout

@@ -4,7 +4,6 @@ import com.academy.automationpractice.ddt.framework.model.AddressData;
 import com.academy.automationpractice.ddt.framework.model.Addresses;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import static com.academy.util.MatcherAssertExt.assertThat;
@@ -19,7 +18,6 @@ public class AddressTests extends BaseTest {
         manager.session().login();
         manager.goTo().address();
     }
-@Ignore
     @Test(dataProvider = "creationAddress")
     public void testAddAddress(AddressData address) {
         System.out.println("start 'testAddAddress'");

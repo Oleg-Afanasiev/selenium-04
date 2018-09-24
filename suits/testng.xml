@@ -2,19 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <!--Конфигурация для testNG фреймворка-->
-<suite name="tests" parallel="tests" thread-count="1">
-    <test name="all">
+<suite name="tests" parallel="tests"  thread-count="1">
+    <test name="all1"     parallel="none">
         <parameter name="browser" value="chrome" />
-        <classes>
+        <packages>
             <!--Запускаем все тесты из пакета 'com.academy.tests.*'-->
-            <class name="com.academy.automationpractice.ddt.tests.SortDresses" />
-        </classes>
+            <package name="com.academy.automationpractice.*" />
+        </packages>
     </test>
-    <!--<test name="all">-->
-        <!--<parameter name="browser" value="firefox" />-->
-        <!--<packages>-->
-            <!--&lt;!&ndash;Запускаем все тесты из пакета 'com.academy.tests.*'&ndash;&gt;-->
-            <!--<package name="com.academy.automationpractice.ddt.tests.*" />-->
-        <!--</packages>-->
-    <!--</test>-->
+<!--<test name="all2"   parallel="none">-->
+    <!--<parameter name="browser" value="firefox" />-->
+    <!--<packages>-->
+        <!--&lt;!&ndash;Запускаем все тесты из пакета 'com.academy.tests.*'&ndash;&gt;-->
+        <!--<package name="com.academy.automationpractice.*" />-->
+    <!--</packages>-->
+<!--</test>-->
 </suite>

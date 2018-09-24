@@ -35,7 +35,7 @@ public class LoginTests extends BaseTest {
     @DataProvider(name="authProvider")
     private Object[][] authProvider() {
         return new Object[][]{
-                {PropertyManager.from("automation").getProperty("automation.username"), PropertyManager.from("automation").getProperty("automation.password"), "Oleg Afanasiev"}
+                {PropertyManager.from("automation").getProperty("automation.username"), PropertyManager.from("automation").getProperty("automation.password"), "Александр Томах"}
         };
     }
 
